@@ -6,17 +6,16 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:36:46 by asoler            #+#    #+#             */
-/*   Updated: 2022/02/08 20:33:52 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/08 20:38:37 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include <unistd.h>
 
-void char_to_int(int n)
+void	char_to_int(int n)
 {
-	char c;
+	char	c;
+
 	if (n < 10)
 	{
 		c = n + 48;
@@ -24,29 +23,22 @@ void char_to_int(int n)
 	}
 	else
 	{
-		char_to_int(n/10);
-		char_to_int(n%10);
+		char_to_int(n / 10);
+		char_to_int(n % 10);
 	}
 }
 
 void	ft_strlen(char *str)
 {
-	int index;
+	int	index;
+
 	index = 0;
 	while (str[index] != '\0')
 	{
 		index++;
 	}
-	if  (str[index] == '\0')
+	if (str[index] == '\0')
 	{
 		char_to_int(index);
 	}
 }
-
-int	main()
-{
-	char str1[6] = "Marvin";
-	
-	ft_strlen(str1);
-}
-
