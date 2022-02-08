@@ -6,13 +6,28 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 18:36:46 by asoler            #+#    #+#             */
-/*   Updated: 2022/02/08 18:41:25 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/08 20:33:52 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
 #include <unistd.h>
+
+void char_to_int(int n)
+{
+	char c;
+	if (n < 10)
+	{
+		c = n + 48;
+		write(1, &c, 1);
+	}
+	else
+	{
+		char_to_int(n/10);
+		char_to_int(n%10);
+	}
+}
 
 void	ft_strlen(char *str)
 {
@@ -24,8 +39,7 @@ void	ft_strlen(char *str)
 	}
 	if  (str[index] == '\0')
 	{
-		index += 1;
-		
+		char_to_int(index);
 	}
 }
 
@@ -33,9 +47,6 @@ int	main()
 {
 	char str1[6] = "Marvin";
 	
-	// str1[6] = "Marvin";
-	// {'M', 'a', 'r', 'v', 'i', 'n'};
-	
-	ft_putstr(str1);
+	ft_strlen(str1);
 }
 
