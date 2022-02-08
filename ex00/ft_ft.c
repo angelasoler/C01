@@ -6,7 +6,7 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 18:36:29 by asoler            #+#    #+#             */
-/*   Updated: 2022/02/07 19:00:23 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/08 15:36:46 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,4 @@
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-}
-
-int	main(void)
-{
-	int n;
-	n = 15;
-	
-	printf("%d", n);
-	ft_ft(&n);
-	printf("%d", n);
 }
